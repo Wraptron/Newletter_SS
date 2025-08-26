@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIT Madras Sustainability Newsletter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .email-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+           
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c59 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #2d5016;
+            font-size: 12px;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+           
+        }
+        
+        .header .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+        
+        .header .date {
+            font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 0;
+        }
+        
+        .spotlight-section {
+            padding: 50px 30px;
+           
+        }
+        
+        .section-title {
+            color: #2d5016;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: left;
+            color:#1b6aba;
+            padding-bottom: 12px;
+            display: inline-block;
+        }
+        
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .spotlight-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        .spotlight-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .spotlight-image {
+            width: 100%;
+            height: 160px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .date-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(45, 80, 22, 0.95);
+            color: #1b6aba;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        .spotlight-content {
+            padding: 20px;
+        }
+        
+        .spotlight-title {
+            color: #2d5016;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .spotlight-description {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        
+        .read-more {
+            color: #4a7c59;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .read-more:hover {
+            color: #2d5016;
+            text-decoration: underline;
+        }
+        
+        .scholarly-section {
+            background: #f8f9fa;
+            padding: 50px 30px;
+        }
+        
+        .scholarly-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .scholarly-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 4px solid #4a7c59;
+            border: 1px solid #e9ecef;
+        }
+        
+        .scholarly-item h3 {
+            color: #2d5016;
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .scholarly-item p {
+            color: #666;
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        
+        .pdf-link {
+            background: #4a7c59;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+        
+        .pdf-link:hover {
+            background: #2d5016;
+        }
+        
+       @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+        
+        .talks-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .talks-content > div:first-child {
+            flex: 1;
+        }
+        .read-more {
+            color: #90EE90;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+            color: #ffffff;
+        }
+        
+ .courses-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d5016;
+            text-align: left;
+            margin-bottom: 50px;
+            letter-spacing: -0.02em;
+        }
+
+        .course-grid {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .course-item {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+           
+        }
+
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .course-content {
+            padding: 30px;
+        }
+
+        .course-category {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .course-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .course-button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .primary-button {
+            background-color: #2d5016;
+            color: white;
+        }
+
+        .primary-button:hover {
+            background-color: #1a2f0a;
+            transform: translateY(-2px);
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            color: #2d5016;
+            border: 2px solid #2d5016;
+        }
+
+        .secondary-button:hover {
+            background-color: #2d5016;
+            color: white;
+        }
+
+        .view-all-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .view-all-link a {
+            color: #2e85cb;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 1.1rem;
+            text-underline-position: below;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                text-align: center;
+            }
+            
+            .course-content {
+                padding: 25px;
+            }
+            
+            .course-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* Image placeholders with gradient backgrounds */
+        .placeholder-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .bioprocessing-bg {
+            background: linear-gradient(135deg, #e74c3c, #8e44ad, #3498db);
+            background-size: 200% 200%;
+            animation: gradientShift 6s ease infinite;
+        }
+
+        .esg-bg {
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #00d4ff);
+            background-size: 200% 200%;
+            animation: gradientShift 6s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .media-section {
+            background: #f8f9fa;
+            padding: 50px 30px;
+        }
+        
+        .media-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .media-content p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        
+        .media-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .media-logo {
+            height: 35px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .media-logo:hover {
+            opacity: 1;
+        }
+        
+        .media-feature {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            margin-top: 25px;
+        }
+        
+        .media-feature h4 {
+            color: #2d5016;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .media-feature p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        
+        .watch-video {
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .watch-video:hover {
+            background: #c82333;
+        }
+        
+       .upcoming-section {
+            background: #4a3425;
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .upcoming-list {
+            list-style: none;
+        }
+
+        .upcoming-item {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 10px;
+        }
+
+        .upcoming-item:last-child {
+            border-bottom: none;
+        }
+
+        .upcoming-content {
+            line-height: 1.6;
+        }
+
+        .upcoming-content .date-title {
+            color: #bd9066;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .upcoming-content p {
+            font-size: 16px;
+            opacity: 0.95;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .upcoming-content a {
+            color: #bd9066;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .upcoming-content a:hover {
+            color: white;
+        }
+        .footer {
+            background: #bd9066;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+        
+        .footer a {
+            color: #90c695;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+                letter-spacing: 2px;
+            }
+            
+            .spotlight-grid, .course-grid, .scholarly-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .talks-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">IIT<br>MADRAS</div>
+            <h1>NEWSLETTER</h1>
+            <div class="subtitle">School of Sustainability</div>
+            <div class="date">April - June 2025</div>
+        </div>
+        
+        <!-- Spotlight Section -->
+        <div class="spotlight-section">
+            <h2 class="section-title" style="color: #064925;">Spotlight</h2>
+            
+            <div class="spotlight-grid">
+                <div class="date-badge">3-8 April</div>
+                <div class="spotlight-item">
+                        
+                    
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-title">Short Course: Biopolymers for Sustainable Circular Economy</h3>
+                        <p class="spotlight-description">by Prof. Ashok Pandey, Indian Institute of Technology, Sweden</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="spotlight-item">
+                    <div class="spotlight-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%234a7c59%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Certificate Course</text></svg>')">
+                        <div class="date-badge">21-25 April</div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-title">Certificate Course: "The Use of AIML in Environmental Audit and Management"</h3>
+                        <p class="spotlight-description">Conducted at School of Sustainability, IIT Madras</p>
+                        
+                    </div>
+                </div>
+                
+                <div class="spotlight-item">
+                    <div class="spotlight-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%23689775%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Workshop</text></svg>')">
+                        <div class="date-badge">26 April</div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-title">Workshop: Games for Good Governance: Building Sustainable Futures</h3>
+                        <p class="spotlight-description">Read the proceedings here</p>
+                        <a href="#" class="read-more">Read proceedings →</a>
+                    </div>
+                </div>
+                
+                <div class="spotlight-item">
+                    <div class="spotlight-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%235a8a67%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Conference</text></svg>')">
+                        <div class="date-badge">2-3 June</div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-title">Roundtable: Sustainability in the built Environment</h3>
+                        <p class="spotlight-description">supported by Schmidt Sciences</p>
+                       
+                    </div>
+                </div>
+                
+                <div class="spotlight-item">
+                    <div class="spotlight-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%233e6b4b%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Symposium</text></svg>')">
+                        <div class="date-badge">21-22 June</div>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-title">SusNAK - ACE 2025 & 4th COSHAR Meet</h3>
+                        <p class="spotlight-description">Decarbonisation and Accelerating Clean Energy</p>
+                        <a href="#" class="read-more">Register now →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scholarly Writing Section -->
+        <div class="scholarly-section">
+            <h2 class="section-title" style="color:#1b6aba">Select Scholarly Writing & Speaking</h2>
+            
+            <div class="scholarly-grid">
+                <div class="scholarly-item">
+                    <h3>The Foundational Papers Hypothesis, and technological supremacy in big science worldwide: Elements of a...</h3>
+                    <p>Satyanarayana, K., Sharma, V.</p>
+                    <a href="#" class="pdf-link">View PDF</a>
+                </div>
+                
+                <div class="scholarly-item">
+                    <h3>Corporate Tax and Carbon Emissions in the Indian Manufacturing Sector</h3>
+                    <p>Harini, B. B., & Prakash, S. S.</p>
+                    <a href="#" class="pdf-link">View PDF</a>
+                </div>
+                
+                <div class="scholarly-item">
+                    <h3>Special Collection of Papers: Household and environmental exposures, and cancer risk...</h3>
+                    <p>Environmental Research Journal</p>
+                    <a href="#" class="pdf-link">View PDF</a>
+                </div>
+                
+                <div class="scholarly-item">
+                    <h3>Recycling and Recovery of Paper/Cardboard from Municipal Solid Waste: Global and...</h3>
+                    <p>Sustainability Research</p>
+                    <a href="#" class="pdf-link">View PDF</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Talks Section -->
+    
+<div class="talks-section" style="color:#bd9066; background:#4a3425; font-family: 'Work Sans', sans-serif; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">     
+    <h2 class="section-title" style="color: #ffffff; font-size: 28px; font-weight: 700; margin-bottom: 25px; text-align: center; letter-spacing: 1px;">Talks Hosted</h2>          
+    
+    <div class="talks-content" style="display: flex; gap: 25px; align-items: center; flex-wrap: wrap;">         
+        <div style="flex: 1; min-width: 300px;">             
+            <h3 style="color: #ffffff; font-size: 20px; margin-bottom: 15px; font-weight: 600; line-height: 1.4; font-style: italic;">"Analyzing Firms' Preferences for Greenhouse Gas Policy and Mitigation Measures in India by Dr. Gokila Timalsina (The World Bank) with Dr. Mahima Gupta (IGIDR)"</h3>                                
+        </div>         
+        <div class="talks-image" style="width: 200px; height: 150px; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 300 200%22%3E%3Crect fill=%22%23e9ecef%22 width=%22300%22 height=%22200%22/%3E%3Ccircle cx=%22150%22 cy=%22100%22 r=%2225%22 fill=%22%234a7c59%22/%3E%3Cpolygon points=%22145,90 145,110 160,100%22 fill=%22white%22/%3E%3C/svg%3E'); border-radius: 8px; border: 2px solid #bd9066;"></div>     
+    </div>          
+</div>
+        
+        <!-- Course Offerings -->
+        <div class="courses-section">
+        <h2 class="section-title">Course Offerings</h2>
+        <div class="course-grid">
+            <div class="course-item">
+                <div class="placeholder-image bioprocessing-bg">
+                    <div>
+                        <strong>PLANT CELL BIOPROCESSING</strong><br>
+                        <span style="font-size: 0.9rem;">PROF. SMITA SRIVASTAVA<br>IIT MADRAS</span>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-category">For Students</h3>
+                    <p class="course-title">Plant Cell Bioprocessing by Prof. Smita Srivastava</p>
+                    <div class="course-buttons">
+                        <a href="#" class="course-button primary-button">View Course</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="placeholder-image esg-bg">
+                    <div>
+                        <h3 class="course-category">ESG</strong><br></h3>
+                        <p class="course-title">Environmental, Social & Governance</span>
+                    </div>
+                </div>
+                <div class="course-content">
+                    <h3 class="course-category">For Industry Professionals</h3>
+                    <p class="course-title">Masterclass on ESG: From Compliance to Opportunity</p>
+                    <div class="course-buttons">
+                        <a href="https://code.iitm.ac.in/masterclass-on-esg-from-compliance-to-opportunity" class="course-button primary-button">Register Now</a>
+                        <a href="https://drive.google.com/file/d/1Up5uEcJeYUNcC2KkbQGdtyzrOq0hajUX/view" class="course-button secondary-button">View Brochure</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all-link">
+            <a href="https://sustainability.iitm.ac.in/education">View all courses →</a>
+        <!-- Media Section -->
+        <div class="media-section">
+            <h2 class="section-title">In the Media</h2>
+            
+            <div class="media-content">
+                <p>IIT Madras School of Sustainability hosts National Meet to accelerate India's decarbonisation and energy transitions.</p>
+                
+                <div class="media-logos">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 35'><rect fill='%23666' width='120' height='35'/><text x='60' y='22' fill='white' text-anchor='middle' font-family='Work Sans' font-size='11' font-weight='600'>WEI INDIA</text></svg>" alt="WEI India" class="media-logo">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 35'><rect fill='%23666' width='120' height='35'/><text x='60' y='22' fill='white' text-anchor='middle' font-family='Work Sans' font-size='11' font-weight='600'>DT NEXT</text></svg>" alt="DT Next" class="media-logo">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 35'><rect fill='%23666' width='120' height='35'/><text x='60' y='18' fill='white' text-anchor='middle' font-family='Work Sans' font-size='10' font-weight='600'>Education Diary</text></svg>" alt="Education Diary" class="media-logo">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 35'><rect fill='%23666' width='120' height='35'/><text x='60' y='18' fill='white' text-anchor='middle' font-family='Work Sans' font-size='9' font-weight='600'>THE TIMES OF INDIA</text></svg>" alt="Times of India" class="media-logo">
+                </div>
+                
+                <div class="media-feature">
+                    <h4>Creating Net Zero Villages: Sustainable Solutions from IIT Madras School of Sustainability</h4>
+                    <p>Discover how IIT Madras is leading innovative approaches to create sustainable, net-zero communities across India.</p>
+                    <a href="#" class="watch-video">Watch Video</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Upcoming Events -->
+       <div class="upcoming-section">
+        <h2 class="section-title">What's Upcoming?</h2>
+        
+        <ul class="upcoming-list">
+            <li class="upcoming-item">
+                <div class="upcoming-content">
+                    <div class="date-title">1-5 Oct: DWIH Workshop:</div>
+                    <p>Building Strategic Partnerships for the Spatial Sustainability Transformation: Potentials for Collaborative Indo-German Research with IOER, Germany</p>
+                </div>
+            </li>
+            
+            <li class="upcoming-item">
+                <div class="upcoming-content">
+                    <div class="date-title">6-7 Oct: Tamil Nadu Land Use 2025:</div>
+                    <p>International Conference on Research & Innovation for a Sustainable Future.</p>
+                    <a href="https://tnslurb.tn.gov.in/tnlanduse2025/">https://tnslurb.tn.gov.in/tnlanduse2025/</a>
+                </div>
+            </li>
+            
+            <li class="upcoming-item">
+                <div class="upcoming-content">
+                    <div class="date-title">30-31 Jan, 2026: Cities of Care:</div>
+                    <p>Shaping Sustainable and Equitable Futures through the Water–Food–Waste Nexus. <strong>Call for abstracts now open.</strong></p>
+                    <a href="https://schoolofcities.utoronto.ca/event/cities-of-care/">https://schoolofcities.utoronto.ca/event/cities-of-care/</a>
+                </div>
+            </li>
+            
+            <li class="upcoming-item">
+                <div class="upcoming-content">
+                    <div class="date-title">Living Labs Projects:</div>
+                    <p>An initiative of the Sustainability Committee and supported by SoS IITM.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2025 IIT Madras School of Sustainability. All rights reserved.</p>
+            <p><a href="mailto:sustainability@iitm.ac.in">sustainability@iitm.ac.in</a> | <a href="https://sustainability.iitm.ac.in">sustainability.iitm.ac.in</a></p>
+        </div>
+    </div>
+</body>
+</html>
