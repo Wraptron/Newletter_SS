@@ -37,8 +37,8 @@
       }
 
       .logo {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         background: white;
         border-radius: 50%;
         margin: 0 auto 20px;
@@ -48,14 +48,6 @@
         font-weight: 700;
         color: #2d5016;
         font-size: 12px;
-        overflow: hidden;
-      }
-
-      .logo img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border-radius: 50%;
       }
 
       .header h1 {
@@ -131,7 +123,7 @@
         top: 12px;
         left: 12px;
         background: rgba(45, 80, 22, 0.95);
-        color: #ffffff;
+        color: #1b6aba;
         padding: 6px 12px;
         border-radius: 15px;
         font-size: 11px;
@@ -414,83 +406,76 @@
         .section-title {
           font-size: 26px;
         }
+      }
+      .section-title {
+  grid-column: 1 / -1;      /* span full width of grid */
+  text-align: center;
+  font-size: 2.2rem;        /* matches screenshot */
+  font-weight: 700;         
+  color: #1e88e5;           /* blue like screenshot */
+  margin: 20px 0 30px;      /* spacing above and below */
+}
 
-        .logo {
-          width: 50px;
-          height: 50px;
-        }
-      }
-      h1 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #2196f3;
-        margin: 30px 0;
-      }
+
 
       .container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-        padding: 0 40px 40px;
-        width: 100%;
-        margin: auto;
-      }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;   /* row gap 40px, column gap 30px */
+  padding: 0 40px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-      .card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        overflow: hidden;
-      }
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-      .card img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
+.card img {
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 8px 12px -6px rgba(0, 0, 0, 0.2);
 
-      .card-header {
-        height: 40px;
-        background: #f5f5f5;
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        font-weight: bold;
-        font-size: 0.9rem;
-        color: #444;
-      }
+}
+.read-more-wrapper {
+  display: flex;
+  position: relative;
+  right: 100px;  
+  height: 30px;            
+  margin-top: 10px;         
+}
 
-      .card-content {
-        padding: 15px;
-        font-size: 0.95rem;
-        line-height: 1.4;
-        flex-grow: 1;
-      }
+.read-more-btn {
+  background:linear-gradient(132deg,#1b6aba,#34d8d8);
+  border: none;
+  padding: 0 15px;       
+  text-decoration: underline;  
+  border-radius: 25px;
+  color: #fff;
+  font-size: 0.9rem;
+  height: 30px;             
+  width: 135px;
+  line-height: 30px;        
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
 
-      .read-btn {
-        text-align: center;
-        padding: 15px;
-      }
+.read-more-btn:hover {
+  background: #0097a7;
+}
 
-      .read-btn button {
-        background: #2196f3;
-        border: none;
-        padding: 8px 20px;
-        border-radius: 25px;
-        color: #fff;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: 0.3s;
-      }
 
-      .read-btn button:hover {
-        background: #1976d2;
-      }
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+
 
       .courses-section {
         padding: 40px 20px;
@@ -509,9 +494,9 @@
       .section-title {
         font-size: 28px;
         
-        color: #2e7d32;
+        color: #2e85cb;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: -20px;
         text-align: left;
       }
 
@@ -608,79 +593,95 @@
       .view-all:hover {
         text-decoration: underline;
       }
-      .media-section {
-      padding: 40px 20px;
-      background: #f9fbff;
-    }
+.media-section {
+  padding: 40px 40px;
+  background: #fff; /* white like screenshot */
+}
 
-    .media-section .section-title {
-      font-size: 26px;
-      font-weight: bold;
-      color: #1565c0;
-      margin-bottom: 20px;
-      text-align: left;
-    }
+.media-section .section-title {
+      font-size: 35px;
+    font-weight: 600;
+  color: #2e85cb;
+  margin-bottom: 15px;
+  text-align: left;
+}
 
-    /* Two-column layout */
-    .media-top {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+.media-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  top: 27px;
+  margin-bottom: 30px;
+}
 
-    .media-text {
-      flex: 1 1 45%;
-      font-size: 16px;
-      line-height: 1.6;
-    }
+.media-text {
+    flex: 1 1 45%;
+    font-size: 19px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222;
+    position: relative;
+    bottom: 70px;
+}
 
-    .media-image {
-      flex: 1 1 45%;
-      text-align: right;
-    }
+.media-image {
+  flex: 1 1 45%;
+  text-align: right;
+  position: relative;
+  bottom: 100px  ;
+}
 
-    .media-image img {
-      max-width: 100%;
-      width: 450px; /* reduced size for better view */
-      border-radius: 6px;
-    }
+.media-image img {
+  max-width: 100%;
+  width: 480px;
+  border-radius: 8px;
+}
 
-    /* Logos row */
-    .media-logos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-    }
+/* Logos row */
+.media-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
-    .media-logos img {
-      max-height: 60px;
-      max-width: 160px;
-      object-fit: contain;
-    }
+.media-logos img {
+  max-height: 60px;
+  max-width: 160px;
+  object-fit: contain;
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .media-top {
-        flex-direction: column;
-        text-align: center;
-      }
-      .media-text {
-        flex: 1 1 100%;
-      }
-      .media-image {
-        flex: 1 1 100%;
-        text-align: center;
-      }
-      .media-image img {
-        width: 100%;
-        max-width: 350px;
-      }
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .media-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .media-text {
+    flex: 1 1 100%;
+  }
+
+  .media-image {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .media-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .media-logos {
+    gap: 20px;
+  }
+}
+
     
         .News-section {
       max-width: 1100px;
@@ -694,11 +695,10 @@
       font-size: 32px;
       font-weight: bold;
       margin: 0 0 10px;
-      color: #000;
     }
 
     .news-header h2 {
-      font-size: 28px;
+      font-size: 18px;
       font-weight: bold;
       margin: 0 0 8px;
       line-height: 1.4;
@@ -754,7 +754,7 @@
       color: #fff;
       font-weight: bold;
       font-size: 14px;
-      padding: 10px 18px ;
+      padding: 10px 18px;
       border-radius: 30px;
       text-decoration: none;
       transition: background 0.3s ease;
@@ -767,49 +767,6 @@
     .watch-button .icon {
       font-size: 16px;
     }
-
-    .upcoming-section {
-            background: #5e3f2b;
-            color: white;
-            padding: 60px 60px;
-            max-width: 1000px;
-            margin: 0 auto;
-            font-weight: bold;
-        }
-
-        .section-title {
-            color: white;
-            font-size: 2px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .upcoming-list {
-            list-style:disc;
-        }
-
-        .upcoming-item {
-            padding: 25px 0;
-            margin-bottom: 10px;
-        }
-        .upcoming-content {
-            line-height: 1.6;
-        }
-        .upcoming-content p {
-            font-size: 21px;
-            opacity: 1.95;
-            line-height: 1.6;
-            text-align:left;
-        }
-
-        .upcoming-content a {
-            color: #ffffff;
-            font-size: 14px;
-            
-        }
-
-        
-        
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -824,146 +781,172 @@
     }
     </style>
   </head>
-
-  
   <body>
     <div class="email-container">
       <!-- Header -->
       <div class="header">
-  <div class="logo">
-    <img src="logo (1).webp" alt="IIT Madras Logo" />
-  </div>
-  <h1>NEWSLETTER</h1>
-  <div class="subtitle">School of Sustainability</div>
-  <div class="date">April - June 2025</div>
-</div>
-
+        <div class="logo">IIT<br />MADRAS</div>
+        <h1>NEWSLETTER</h1>
+        <div class="subtitle">School of Sustainability</div>
+        <div class="date">April - June 2025</div>
+      </div>
 
       <!-- Spotlight Section -->
-
       <div class="spotlight-section">
-  <h2 class="section-title">Spotlight</h2>
+        <h2 class="section-title" style="color: #064925">Spotlight</h2>
 
-  <div class="spotlight-grid">
-    <!-- ITEM 1 -->
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7315797025185239040" class="spotlight-item">
-      <div class="spotlight-image" 
-        style="background-image: linear-gradient(rgba(216, 17, 17, 0.3), rgba(0, 0, 0, 0.3)), url('Event1.jpg');">
-        <div class="date-badge">3-8 April</div>
+        <div class="spotlight-grid">
+          <div class="date-badge">3-8 April</div>
+          <div class="spotlight-item">
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">
+                Short Course: Biopolymers for Sustainable Circular Economy
+              </h3>
+              <p class="spotlight-description">
+                by Prof. Ashok Pandey, Indian Institute of Technology, Sweden
+              </p>
+            </div>
+          </div>
+
+          <div class="spotlight-item">
+            <div
+              class="spotlight-image"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                  ),
+                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%234a7c59%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Certificate Course</text></svg>');
+              "
+            >
+              <div class="date-badge">21-25 April</div>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">
+                Certificate Course: "The Use of AIML in Environmental Audit and
+                Management"
+              </h3>
+              <p class="spotlight-description">
+                Conducted at School of Sustainability, IIT Madras
+              </p>
+            </div>
+          </div>
+
+          <div class="spotlight-item">
+            <div
+              class="spotlight-image"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                  ),
+                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%23689775%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Workshop</text></svg>');
+              "
+            >
+              <div class="date-badge">26 April</div>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">
+                Workshop: Games for Good Governance: Building Sustainable
+                Futures
+              </h3>
+              <p class="spotlight-description">Read the proceedings here</p>
+              <a href="#" class="read-more">Read proceedings →</a>
+            </div>
+          </div>
+
+          <div class="spotlight-item">
+            <div
+              class="spotlight-image"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                  ),
+                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%235a8a67%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Conference</text></svg>');
+              "
+            >
+              <div class="date-badge">2-3 June</div>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">
+                Roundtable: Sustainability in the built Environment
+              </h3>
+              <p class="spotlight-description">supported by Schmidt Sciences</p>
+            </div>
+          </div>
+
+          <div class="spotlight-item">
+            <div
+              class="spotlight-image"
+              style="
+                background-image: linear-gradient(
+                    rgba(0, 0, 0, 0.3),
+                    rgba(0, 0, 0, 0.3)
+                  ),
+                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%233e6b4b%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Symposium</text></svg>');
+              "
+            >
+              <div class="date-badge">21-22 June</div>
+            </div>
+            <div class="spotlight-content">
+              <h3 class="spotlight-title">
+                SusNAK - ACE 2025 & 4th COSHAR Meet
+              </h3>
+              <p class="spotlight-description">
+                Decarbonisation and Accelerating Clean Energy
+              </p>
+              <a href="#" class="read-more">Register now →</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="spotlight-content">
-        <h3 class="spotlight-title">
-          Short Course: Biopolymers for Sustainable Circular Economy by Dr Antonio Capezza, KTH Royal Institute of Technology, Sweden
-        </h3>
-      </div>
-    </a>
-
-    <!-- ITEM 2 -->
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7326207089255571456" class="spotlight-item">
-      <div class="spotlight-image" 
-        style="background-image: linear-gradient(rgba(216, 17, 17, 0.3), rgba(0, 0, 0, 0.3)), url('Event2.png');">
-        <div class="date-badge">21-25 April</div>
-      </div>
-      <div class="spotlight-content">
-        <h3 class="spotlight-title">
-          Certificate Course: "The Use of AI/ML in Environmental Audit and ESG" for the CAG of India at iCED, Jaipur
-        </h3>
-      </div>
-    </a>
-
-    <!-- ITEM 3 -->
-    <a href="event3.html" class="spotlight-item">
-      <div class="spotlight-image" style="background-image: url('Event4.png');width: 300px; height: 300px;">
-        <div class="date-badge">21-25 April</div>
-      </div>
-    </a>
-
-    <!-- ITEM 4 -->
-    <div class="spotlight-item">
-  <div class="spotlight-content">
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7328776669698174976" target="_blank">
-      <h3 class="spotlight-title">
-        Workshop: Games for Good Governance: Sustainable Urban Futures. Read the proceedings here.
-      </h3>
-    </a>
-
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346041430101872642" target="_blank">
-      <h3>21-22 June: Symposium</h3>
-    </a>
-
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346041430101872642" target="_blank">
-      <h3>23-24 June: Conference</h3>
-    </a>
-  </div>
-</div>
-
-
-    <!-- ITEM 5 -->
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7315797025185239040" class="spotlight-item">
-      <div class="spotlight-image" 
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Event5.png');">
-        <div class="date-badge">2-3 June</div>
-      </div>
-      <div class="spotlight-content">
-        <h3 class="spotlight-title">
-          Roundtable: Sustainability in the Built Environment Supported by Schmidt Sciences
-        </h3>
-      </div>
-    </a>
-
-    <!-- ITEM 6 -->
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7326207089255571456" class="spotlight-item">
-      <div class="spotlight-image" 
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Event6.png');">
-        <div class="date-badge">21-22 June</div>
-      </div>
-      <div class="spotlight-content">
-        <h3 class="spotlight-title">
-          SusNAK - ACE 2025 & 4th COSHAR Meet : Decarbonisation and Accelerating Clean Energy
-        </h3>
-      </div>
-    </a>
-  </div>
-</div>
-
-
-
 
       <!-- Scholarly Writing Section -->
-      <h1>Select Scholarly Writing & Speaking</h1>
       <div class="container">
-        <div class="card">
-          <img src="img1.jpg" />
-          <div class="read-btn">
-            <a href="https://pubs.acs.org/doi/10.1021/acsestwater.4c01076" target="_blank"><button>Read more</button></div></a>
-        </div>
-        <div class="card">
-          <img src="img2.jpg" />
-          <div class="read-btn">
-            <a href="https://pubs.acs.org/doi/10.1021/acs.energyfuels.4c05652" target="_blank"><button>Read more</button></div></a>
-        </div>
-        <div class="card">
-          <img src="img3.jpg" />
-          <div class="read-btn">
-            <a href="https://link.springer.com/chapter/10.1007/978-981-96-2860-5_12" target="_blank"><button>Read more</button></div></a>
-        </div>
-        <div class="card">
-          <img src="img4.jpg" />
-          <div class="read-btn">
-           <a href="https://link.springer.com/chapter/10.1007/978-981-96-2860-5_12" target="_blank"><button>Read more</button></div></a>
+  <h1 class="section-title">Select Scholarly Writing & Speaking</h1>
 
-        </div>
-        <div class="card">
-          <img src="img5.jpg" />
-          <div class="read-btn">
-            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/bsd2.70110" target="_blank"><button>Read more</button></div></a>
-        </div>
-        <div class="card">
-          <img src="img6.jpg" />
-          <div class="read-btn">
-            <a href="https://www.jendodon.com/article/S0099-2399(25)00319-X/abstract" target="_blank"><button>Read more</button></div></a>
-        </div>
-      </div>
+  <div class="card">
+    <img src="img1.jpg" alt="Article 1" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img2.jpg" alt="Article 2" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img3.jpg" alt="Article 3" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img4.jpg" alt="Article 4" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img5.jpg" alt="Article 5" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img6.jpg" alt="Article 6" />
+    <div class="read-more-wrapper">
+      <button class="read-more-btn">Read more</button>
+    </div>
+  </div>
+</div>
+
+
+
+
 
       <!-- Talks Section -->
 
@@ -1042,7 +1025,7 @@
           Plant Cell Bioprocessing by Prof. Smita Srivastava
         </p>
         <div class="course-buttons">
-          <a href="https://onlinecourses.nptel.ac.in/noc25_bt63/preview" class="course-button primary-button">View Course</a>
+          <a href="#" class="course-button primary-button">View Course</a>
         </div>
       </div>
     </div>
@@ -1070,7 +1053,7 @@
 
   </div>
   <a href="https://sustainability.iitm.ac.in/education" class="view-all">
-    View all courses →
+    View all courses 
   </a>
 </div>
 
@@ -1079,37 +1062,40 @@
         
         <!-- Media Section -->
         <div class="media-section">
-    <h2 class="section-title">In the Media</h2>
+  <h2 class="section-title">In the Media</h2>
 
-    <div class="media-top">
-      <!-- Text -->
-      <div class="media-text">
-        <p>
-          IIT Madras School of Sustainability Hosts National Meet to accelerate India’s decarbonization and energy transitions.
-        </p>
-      </div>
-
-      <!-- Image -->
-      <div class="media-image">
-        <img src="Event5.png" alt="IITM Media Coverage">
-      </div>
+  <div class="media-top">
+    <!-- Text -->
+    <div class="media-text">
+      <p>
+        IIT Madras School of Sustainability Hosts National Meet to accelerate
+        India’s decarbonization and energy transitions.
+      </p>
     </div>
 
-    <!-- Logos Row -->
-    <div class="media-logos">
-      <img src="logo1.png" alt="WRI India">
-      <img src="logo2.png" alt="IIT Madras">
-      <img src="logo3.png" alt="Bharat TV">
-      <img src="logo4.png" alt="DT Next">
-      <img src="logo5.png" alt="Dinamalar">
-      <img src="logo6.png" alt="India Education Diary">
+    <!-- Image -->
+    <div class="media-image">
+      <img src="Event5.png" alt="IITM Media Coverage" />
     </div>
   </div>
+
+  <!-- Logos Row -->
+  <div class="media-logos">
+    <img src="logo1.png" alt="Azadi Ka Amrit Mahotsav">
+    <img src="logo2.png" alt="IIT Madras">
+    <img src="logo3.png" alt="Bharat TV">
+    <img src="logo4.png" alt="DT Next">
+    <img src="logo5.png" alt="WRI India">
+    <img src="logo6.png" alt="Dinamalar">
+    <img src="logo7.png" alt="India Education Diary">
+  </div>
+</div>
+
  <div class="News-section">
 
     <!-- Times of India Header -->
     <div class="news-header">
-      <h1 style="text-align:left;">THE TIMES OF INDIA</h1>
+      <h1>THE TIMES OF INDIA</h1>
       <h2>Engineers in governance can shape India’s future: IIT-M director Kamakoti</h2>
       <div class="news-meta">
         Manash Pratim Gohain / TNN / Updated: Jun 28, 2025, 20:10 IST
@@ -1119,14 +1105,12 @@
     <!-- Body with video + content -->
     <div class="news-body">
       <div class="news-video">
-        <a href="https://drive.google.com/drive/u/0/folders/1M2JWHLreS1pOsVbHq7qyee5FRDIWDnlz">
-    <img src="image (1).png" alt="Video thumbnail" />
-</a>
+        <img src="image (1).png" alt="Video thumbnail">
       </div>
 
       <div class="news-content">
         <h3>Creating Net Zero Villages: <br> Sustainable Solutions from IIT Madras School of Sustainability</h3>
-        <a href="https://www.youtube.com/watch?v=yB4zLZqwMCQ" class="watch-button">
+        <a href="#" class="watch-button">
           <span class="icon">▶</span> WATCH NOW
         </a>
       </div>
@@ -1134,44 +1118,60 @@
 
   </div>
         <!-- Upcoming Events -->
-    
-       <div class="upcoming-section">
-        <h2 class="upcoming-title" style="text-align:left;">What's Upcoming?</h2>
-        
-        <ul class="upcoming-list">
-            <li class="upcoming-item">
-                <div class="upcoming-content">
-                    
-                    <p> 1-5 Oct: DWIH Workshop: Building Strategic Partnerships for the Spatial Sustainability Transformation: Potentials for Collaborative Indo-German Research with IOER, Germany</p>
-                </div>
-            </li>
-            
-            <li class="upcoming-item">
-                <div class="upcoming-content">
-                    
-                    <p> 6-7 Oct: Tamil Nadu Land Use 2025: International Conference on Research & Innovation for a Sustainable Future.</p>
-                    <a href="https://tnslurb.tn.gov.in/tnlanduse2025/" style="text-align: left;">https://tnslurb.tn.gov.in/tnlanduse2025/</a>
-                </div>
-            </li>
-            
-            <li class="upcoming-item">
-                <div class="upcoming-content">
-                    
-                    <p> 30-31 Jan, 2026: Cities of Care: Shaping Sustainable and Equitable Futures through the Water–Food–Waste Nexus. <strong>Call for abstracts now open.</strong></p>
-                    <a href="https://schoolofcities.utoronto.ca/event/cities-of-care/">https://schoolofcities.utoronto.ca/event/cities-of-care/</a>
-                </div>
-            </li>
-            
-            <li class="upcoming-item">
-                <div class="upcoming-content">
-                    <p>Living Labs Projects: An initiative of the Sustainability Committee and supported by SoS IITM.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
-        
-        <!-- Footer -->
+        <div class="upcoming-section">
+          <h2 class="section-title">What's Upcoming?</h2>
 
+          <ul class="upcoming-list">
+            <li class="upcoming-item">
+              <div class="upcoming-content">
+                <div class="date-title">1-5 Oct: DWIH Workshop:</div>
+                <p>
+                  Building Strategic Partnerships for the Spatial Sustainability
+                  Transformation: Potentials for Collaborative Indo-German
+                  Research with IOER, Germany
+                </p>
+              </div>
+            </li>
+
+            <li class="upcoming-item">
+              <div class="upcoming-content">
+                <div class="date-title">6-7 Oct: Tamil Nadu Land Use 2025:</div>
+                <p>
+                  International Conference on Research & Innovation for a
+                  Sustainable Future.
+                </p>
+                <a href="https://tnslurb.tn.gov.in/tnlanduse2025/"
+                  >https://tnslurb.tn.gov.in/tnlanduse2025/</a
+                >
+              </div>
+            </li>
+
+            <li class="upcoming-item">
+              <div class="upcoming-content">
+                <div class="date-title">30-31 Jan, 2026: Cities of Care:</div>
+                <p>
+                  Shaping Sustainable and Equitable Futures through the
+                  Water–Food–Waste Nexus.
+                  <strong>Call for abstracts now open.</strong>
+                </p>
+                <a
+                  href="https://schoolofcities.utoronto.ca/event/cities-of-care/"
+                  >https://schoolofcities.utoronto.ca/event/cities-of-care/</a
+                >
+              </div>
+            </li>
+
+            <li class="upcoming-item">
+              <div class="upcoming-content">
+                <div class="date-title">Living Labs Projects:</div>
+                <p>
+                  An initiative of the Sustainability Committee and supported by
+                  SoS IITM.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <!-- Footer -->
         <div class="footer">
