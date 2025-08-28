@@ -37,8 +37,8 @@
       }
 
       .logo {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         background: white;
         border-radius: 50%;
         margin: 0 auto 20px;
@@ -48,6 +48,14 @@
         font-weight: 700;
         color: #2d5016;
         font-size: 12px;
+        overflow: hidden;
+      }
+
+      .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 50%;
       }
 
       .header h1 {
@@ -123,7 +131,7 @@
         top: 12px;
         left: 12px;
         background: rgba(45, 80, 22, 0.95);
-        color: #1b6aba;
+        color: #ffffff;
         padding: 6px 12px;
         border-radius: 15px;
         font-size: 11px;
@@ -405,6 +413,11 @@
 
         .section-title {
           font-size: 26px;
+        }
+
+        .logo {
+          width: 50px;
+          height: 50px;
         }
       }
       h1 {
@@ -811,153 +824,144 @@
     }
     </style>
   </head>
+
+  
   <body>
     <div class="email-container">
       <!-- Header -->
       <div class="header">
-        <div class="logo">IIT<br />MADRAS</div>
-        <h1>NEWSLETTER</h1>
-        <div class="subtitle">School of Sustainability</div>
-        <div class="date">April - June 2025</div>
-      </div>
+  <div class="logo">
+    <img src="logo (1).webp" alt="IIT Madras Logo" />
+  </div>
+  <h1>NEWSLETTER</h1>
+  <div class="subtitle">School of Sustainability</div>
+  <div class="date">April - June 2025</div>
+</div>
+
 
       <!-- Spotlight Section -->
+
       <div class="spotlight-section">
-        <h2 class="section-title" style="color: #064925">Spotlight</h2>
+  <h2 class="section-title">Spotlight</h2>
 
-        <div class="spotlight-grid">
-          <div class="date-badge">3-8 April</div>
-          <div class="spotlight-item">
-            <div class="spotlight-content">
-              <h3 class="spotlight-title">
-                Short Course: Biopolymers for Sustainable Circular Economy
-              </h3>
-              <p class="spotlight-description">
-                by Prof. Ashok Pandey, Indian Institute of Technology, Sweden
-              </p>
-            </div>
-          </div>
-
-          <div class="spotlight-item">
-            <div
-              class="spotlight-image"
-              style="
-                background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.3),
-                    rgba(0, 0, 0, 0.3)
-                  ),
-                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%234a7c59%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Certificate Course</text></svg>');
-              "
-            >
-              <div class="date-badge">21-25 April</div>
-            </div>
-            <div class="spotlight-content">
-              <h3 class="spotlight-title">
-                Certificate Course: "The Use of AIML in Environmental Audit and
-                Management"
-              </h3>
-              <p class="spotlight-description">
-                Conducted at School of Sustainability, IIT Madras
-              </p>
-            </div>
-          </div>
-
-          <div class="spotlight-item">
-            <div
-              class="spotlight-image"
-              style="
-                background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.3),
-                    rgba(0, 0, 0, 0.3)
-                  ),
-                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%23689775%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Workshop</text></svg>');
-              "
-            >
-              <div class="date-badge">26 April</div>
-            </div>
-            <div class="spotlight-content">
-              <h3 class="spotlight-title">
-                Workshop: Games for Good Governance: Building Sustainable
-                Futures
-              </h3>
-              <p class="spotlight-description">Read the proceedings here</p>
-              <a href="#" class="read-more">Read proceedings →</a>
-            </div>
-          </div>
-
-          <div class="spotlight-item">
-            <div
-              class="spotlight-image"
-              style="
-                background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.3),
-                    rgba(0, 0, 0, 0.3)
-                  ),
-                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%235a8a67%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Conference</text></svg>');
-              "
-            >
-              <div class="date-badge">2-3 June</div>
-            </div>
-            <div class="spotlight-content">
-              <h3 class="spotlight-title">
-                Roundtable: Sustainability in the built Environment
-              </h3>
-              <p class="spotlight-description">supported by Schmidt Sciences</p>
-            </div>
-          </div>
-
-          <div class="spotlight-item">
-            <div
-              class="spotlight-image"
-              style="
-                background-image: linear-gradient(
-                    rgba(0, 0, 0, 0.3),
-                    rgba(0, 0, 0, 0.3)
-                  ),
-                  url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 160%22><rect fill=%22%233e6b4b%22 width=%22400%22 height=%22160%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22white%22 text-anchor=%22middle%22 dy=%22.3em%22 font-family=%22Work Sans%22 font-size=%2214%22 font-weight=%22600%22>Symposium</text></svg>');
-              "
-            >
-              <div class="date-badge">21-22 June</div>
-            </div>
-            <div class="spotlight-content">
-              <h3 class="spotlight-title">
-                SusNAK - ACE 2025 & 4th COSHAR Meet
-              </h3>
-              <p class="spotlight-description">
-                Decarbonisation and Accelerating Clean Energy
-              </p>
-              <a href="#" class="read-more">Register now →</a>
-            </div>
-          </div>
-        </div>
+  <div class="spotlight-grid">
+    <!-- ITEM 1 -->
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7315797025185239040" class="spotlight-item">
+      <div class="spotlight-image" 
+        style="background-image: linear-gradient(rgba(216, 17, 17, 0.3), rgba(0, 0, 0, 0.3)), url('Event1.jpg');">
+        <div class="date-badge">3-8 April</div>
       </div>
+      <div class="spotlight-content">
+        <h3 class="spotlight-title">
+          Short Course: Biopolymers for Sustainable Circular Economy by Dr Antonio Capezza, KTH Royal Institute of Technology, Sweden
+        </h3>
+      </div>
+    </a>
+
+    <!-- ITEM 2 -->
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7326207089255571456" class="spotlight-item">
+      <div class="spotlight-image" 
+        style="background-image: linear-gradient(rgba(216, 17, 17, 0.3), rgba(0, 0, 0, 0.3)), url('Event2.png');">
+        <div class="date-badge">21-25 April</div>
+      </div>
+      <div class="spotlight-content">
+        <h3 class="spotlight-title">
+          Certificate Course: "The Use of AI/ML in Environmental Audit and ESG" for the CAG of India at iCED, Jaipur
+        </h3>
+      </div>
+    </a>
+
+    <!-- ITEM 3 -->
+    <a href="event3.html" class="spotlight-item">
+      <div class="spotlight-image" style="background-image: url('Event4.png');width: 300px; height: 300px;">
+        <div class="date-badge">21-25 April</div>
+      </div>
+    </a>
+
+    <!-- ITEM 4 -->
+    <div class="spotlight-item">
+  <div class="spotlight-content">
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7328776669698174976" target="_blank">
+      <h3 class="spotlight-title">
+        Workshop: Games for Good Governance: Sustainable Urban Futures. Read the proceedings here.
+      </h3>
+    </a>
+
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346041430101872642" target="_blank">
+      <h3>21-22 June: Symposium</h3>
+    </a>
+
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7346041430101872642" target="_blank">
+      <h3>23-24 June: Conference</h3>
+    </a>
+  </div>
+</div>
+
+
+    <!-- ITEM 5 -->
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7315797025185239040" class="spotlight-item">
+      <div class="spotlight-image" 
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Event5.png');">
+        <div class="date-badge">2-3 June</div>
+      </div>
+      <div class="spotlight-content">
+        <h3 class="spotlight-title">
+          Roundtable: Sustainability in the Built Environment Supported by Schmidt Sciences
+        </h3>
+      </div>
+    </a>
+
+    <!-- ITEM 6 -->
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7326207089255571456" class="spotlight-item">
+      <div class="spotlight-image" 
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('Event6.png');">
+        <div class="date-badge">21-22 June</div>
+      </div>
+      <div class="spotlight-content">
+        <h3 class="spotlight-title">
+          SusNAK - ACE 2025 & 4th COSHAR Meet : Decarbonisation and Accelerating Clean Energy
+        </h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
 
       <!-- Scholarly Writing Section -->
       <h1>Select Scholarly Writing & Speaking</h1>
       <div class="container">
         <div class="card">
           <img src="img1.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+            <a href="https://pubs.acs.org/doi/10.1021/acsestwater.4c01076" target="_blank"><button>Read more</button></div></a>
         </div>
         <div class="card">
           <img src="img2.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+            <a href="https://pubs.acs.org/doi/10.1021/acs.energyfuels.4c05652" target="_blank"><button>Read more</button></div></a>
         </div>
         <div class="card">
           <img src="img3.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+            <a href="https://link.springer.com/chapter/10.1007/978-981-96-2860-5_12" target="_blank"><button>Read more</button></div></a>
         </div>
         <div class="card">
           <img src="img4.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+           <a href="https://link.springer.com/chapter/10.1007/978-981-96-2860-5_12" target="_blank"><button>Read more</button></div></a>
+
         </div>
         <div class="card">
           <img src="img5.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/bsd2.70110" target="_blank"><button>Read more</button></div></a>
         </div>
         <div class="card">
           <img src="img6.jpg" />
-          <div class="read-btn"><button>Read more</button></div>
+          <div class="read-btn">
+            <a href="https://www.jendodon.com/article/S0099-2399(25)00319-X/abstract" target="_blank"><button>Read more</button></div></a>
         </div>
       </div>
 
@@ -1038,7 +1042,7 @@
           Plant Cell Bioprocessing by Prof. Smita Srivastava
         </p>
         <div class="course-buttons">
-          <a href="#" class="course-button primary-button">View Course</a>
+          <a href="https://onlinecourses.nptel.ac.in/noc25_bt63/preview" class="course-button primary-button">View Course</a>
         </div>
       </div>
     </div>
